@@ -15,7 +15,7 @@ body {
 .hader-section {
     width: 1320px;
     margin-top: 50px;
-    margin-bottom: 60px;
+
     border-radius: 25px;
     background-color: #02072e;
     padding-top: 20px;
@@ -79,11 +79,35 @@ body {
 }
 
 /* card-style strat */
+.blog-button.card-flex {
+    text-align: center;
+    background: #16134f;
+    width: 201px;
+    position: relative;
+    right: 40%;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-button.card-flex a {
+    text-decoration: none;
+    width: 170px;
+    padding: 10px;
+    color: #ffff;
+    background: red;
+    margin-top: 10px;
+    border-radius: 7px;
+    font-size: 18px;
+
+}
+
 .card-section {
     display: flex;
     justify-content: space-between;
     margin-bottom: 100px
 }
+
 
 .card-iteam {
     display: grid;
@@ -100,9 +124,7 @@ body {
     padding-bottom: 16px
 }
 
-.blog-button {
-    margin-right: -60px;
-}
+
 
 button.card-button {
     padding: 8px;
@@ -129,26 +151,6 @@ span {
 
 span i {
     margin-right: 7px;
-}
-
-.blog-button {
-    width: 312px;
-    height: 312px;
-    border-radius: 10px;
-}
-
-.blog-button {
-    background: #02072e;
-}
-
-button.btn {
-    width: 240px;
-    margin: 18px 16px 25px;
-    border-radius: 7px;
-    padding: 20px 20px;
-    border: none;
-    background: rgb(225, 10, 10);
-    transition: background 0.4s;
 }
 
 button.btn a {
@@ -196,6 +198,7 @@ button.btn:hover {
 
 .footer-items {
     display: flex;
+
     padding: 33px 30px;
     border-top: 2px solid gray;
     margin-top: 24px;
@@ -229,10 +232,6 @@ button.btn:hover {
 /* mobile-veiw */
 
 @media only screen and (max-width:576px) {
-    /* body {
-        overflow-x: hidden;
-    } */
-
     .hader-section {
         max-width: 470px;
         padding: 0px;
@@ -245,7 +244,7 @@ button.btn:hover {
 
     .header-content {
         width: 220px;
-        align-items: center;
+        justify-content: center;
 
     }
 
@@ -256,11 +255,31 @@ button.btn:hover {
     .baner-img {
         display: grid;
         justify-content: center;
+    }
+
+    /* card-section-responsive */
+    .blog-button.card-flex {
+        text-align: center;
+        background: none;
+        width: 201px;
+        position: relative;
+        right: 0;
+        top: 0px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-button.card-flex a {
+        width: 170px;
+        padding: 10px;
+        color: #ffff;
 
 
     }
 
-    /* card-section-responsive */
+    .card-content {}
+
     .card-iteam {
         display: flex;
         flex-direction: column;
@@ -272,22 +291,87 @@ button.btn:hover {
         display: flex;
         flex-direction: column;
     }
+}
 
-    /* tab view */
+/* tab view */
 
+/* hader part responsive */
+@media only screen and (min-width:577px) and (max-width:992px) {
+    body {
+        overflow-x: hidden
+    }
 
-    @media only screen and (max-width:992px) {
+    .header-info {
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 30px;
+    }
 
+    .hader-section {
+        max-width: 734px;
+        padding: 0px;
+    }
 
-        /* hader part responsive */
-        .header-content {
-            width: 316px;
-        }
-
-        .header-content h1 {
-            font-size: 40px;
-
-        }
-
+    .header-content {
+        width: 316px;
+        align-items: center;
 
     }
+
+    .header-content h1 {
+        font-size: 40px;
+    }
+
+    .baner-img {
+
+        width: 300px;
+    }
+
+    .baner-img img {
+        width: 100%;
+    }
+
+    /* card-section */
+    @media only screen and (min-width: 577px) and (max-width: 992px) {
+        .blog-button.card-flex {
+            text-align: center;
+            background: none;
+            width: 201px;
+            position: relative;
+            right: 180px;
+            top: 0px;
+            margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .blog-button.card-flex a {
+            width: 170px;
+            padding: 10px 10px;
+            color: #ffff;
+
+
+        }
+
+        .card-iteam {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* footer-section-responsive */
+        .footer-text {
+            font-size: 24px;
+        }
+
+        .footer-items {
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+    }
+}

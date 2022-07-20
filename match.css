@@ -15,7 +15,7 @@ body {
 .hader-section {
     width: 1320px;
     margin-top: 50px;
-    margin-bottom: 60px;
+
     border-radius: 25px;
     background-color: #02072e;
     padding-top: 20px;
@@ -80,6 +80,29 @@ body {
 
 
 /* upcomming match style */
+.blog-button.card-flex {
+    text-align: center;
+    background: #16134f;
+    width: 201px;
+    position: relative;
+    right: 40%;
+    top: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-button.card-flex a {
+    text-decoration: none;
+    width: 170px;
+    padding: 10px;
+    color: #ffff;
+    background: red;
+    margin-top: 10px;
+    border-radius: 7px;
+    font-size: 18px;
+
+}
+
 section.upcoming_match {
     display: flex;
     justify-content: space-between;
@@ -223,3 +246,142 @@ button.btn:hover {
 }
 
 /* footer-section-end */
+/* mobile-veiw */
+
+@media only screen and (max-width:576px) {
+    .hader-section {
+        max-width: 470px;
+        padding: 0px;
+    }
+
+    .header-info {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .header-content {
+        width: 220px;
+        justify-content: center;
+    }
+
+    .header-content h1 {
+        font-size: 22px;
+    }
+
+    .baner-img {
+        display: grid;
+        justify-content: center;
+    }
+
+    .match-info {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        column-gap: 20px;
+    }
+
+    /* card-section-responsive */
+    .blog-button.card-flex {
+        text-align: center;
+        background: none;
+        width: 201px;
+        position: relative;
+        right: 0;
+        top: 0px;
+        margin-bottom: 24px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blog-button.card-flex a {
+        width: 170px;
+        padding: 10px;
+        color: #ffff;
+    }
+
+    /* footer-section-responsive */
+    .footer-items {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* tab view */
+
+/* hader part responsive */
+@media only screen and (min-width:577px) and (max-width:992px) {
+    body {
+        overflow-x: hidden
+    }
+
+    .header-info {
+        display: flex;
+        justify-content: space-evenly;
+        margin-right: 30px;
+    }
+
+    .hader-section {
+        max-width: 734px;
+        padding: 0px;
+    }
+
+    .header-content {
+        width: 316px;
+        align-items: center;
+
+    }
+
+    .header-content h1 {
+        font-size: 40px;
+    }
+
+    .baner-img {
+
+        width: 300px;
+    }
+
+    .baner-img img {
+        width: 100%;
+    }
+
+    /* card-section */
+    @media only screen and (min-width: 577px) and (max-width: 992px) {
+        .blog-button.card-flex {
+            text-align: center;
+            background: none;
+            width: 201px;
+            position: relative;
+            right: 180px;
+            top: 0px;
+            margin-bottom: 24px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+
+        .blog-button.card-flex a {
+            width: 170px;
+            padding: 10px 10px;
+            color: #ffff;
+
+        }
+
+        .match-info {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 20px;
+        }
+
+        /* footer-section-responsive */
+        .footer-text {
+            font-size: 24px;
+        }
+
+        .footer-items {
+
+            display: flex;
+            flex-direction: column;
+
+        }
+
+    }
+}
