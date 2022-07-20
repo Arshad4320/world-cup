@@ -100,7 +100,7 @@ body {
     padding-bottom: 16px
 }
 
-aside.card-button {
+.blog-button {
     margin-right: -60px;
 }
 
@@ -131,23 +131,19 @@ span i {
     margin-right: 7px;
 }
 
-aside {
+.blog-button {
     width: 312px;
     height: 312px;
     border-radius: 10px;
 }
 
-aside.card-button {
+.blog-button {
     background: #02072e;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
 }
 
 button.btn {
     width: 240px;
-    margin: 14px;
+    margin: 18px 16px 25px;
     border-radius: 7px;
     padding: 20px 20px;
     border: none;
@@ -226,26 +222,30 @@ button.btn:hover {
 /* footer-section-end */
 
 /*-----------
-  respovsive style 
+            respovsive style 
 ----------------*/
+
+
 /* mobile-veiw */
 
-@media screen and (max-width:576px) {
+@media only screen and (max-width:576px) {
+    /* body {
+        overflow-x: hidden;
+    } */
 
     .hader-section {
-        width: 334px;
-        margin-top: 50px;
-        margin-bottom: 60px;
-        padding-top: 15px;
+        max-width: 470px;
+        padding: 0px;
     }
 
     .header-info {
+        display: grid;
         grid-template-columns: repeat(1, 1fr);
     }
 
     .header-content {
-        width: 258px;
-        padding: 60px;
+        width: 220px;
+        align-items: center;
 
     }
 
@@ -253,77 +253,41 @@ button.btn:hover {
         font-size: 22px;
     }
 
-    .header-content p {
-        font-size: 14px;
-    }
-
     .baner-img {
-        display: flex;
-        width: 233px;
-        margin-left: 0px;
+        display: grid;
+        justify-content: center;
+
 
     }
 
-    .baner-img img {
-        width: 100%;
-        margin-left: 85px;
-    }
-
-    /* card-responsive */
-    .card-section {
-        display: flex;
-
-    }
-
-    aside {
-        width: 200px;
-        height: 48px;
-        left: 30%;
-        flex-direction: column;
-        position: relative;
-
-    }
-
+    /* card-section-responsive */
     .card-iteam {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        position: relative;
-        right: 13%;
-    }
-
-    .card-images img {
-        width: 100%;
-    }
-
-    .card-content {
-        width: 335px;
-
-    }
-
-    /* footer-responsive */
-    .fotter-main {
-        background-color: #02072e;
-        color: White;
-        padding: 108px;
-        display: grid;
-    }
-
-    .footer-items {
+        display: flex;
         flex-direction: column;
 
     }
 
-    .footer-items li {
-        font-size: 14px;
-        font-weight: 400;
-        padding: 0px 27px;
-        line-height: 50px;
+    /* footer-section-responsive */
+    .footer-items {
+        display: flex;
+        flex-direction: column;
     }
 
-    .footer-text h1 {
-        font-size: 22px;
-        font-weight: 600px;
-    }
-}
+    /* tab view */
 
-/* tablet-view */
+
+    @media only screen and (max-width:992px) {
+
+
+        /* hader part responsive */
+        .header-content {
+            width: 316px;
+        }
+
+        .header-content h1 {
+            font-size: 40px;
+
+        }
+
+
+    }
