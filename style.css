@@ -344,11 +344,12 @@ button.btn:hover {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 10px;
+
         }
 
         .blog-button.card-flex a {
             width: 170px;
-            padding: 10px 10px;
+            padding: 15px 12px;
             color: #ffff;
 
 
@@ -368,10 +369,10 @@ button.btn:hover {
 
         .footer-items {
 
-            display: flex;
-            flex-direction: column;
+            /* display: flex;
+            flex-direction: column; */
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
 
         }
-
     }
-}
